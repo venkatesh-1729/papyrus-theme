@@ -7,21 +7,49 @@ body {
   -o-font-feature-settings: "kern", "liga", "dlig", "salt";
   font-feature-settings: "kern", "liga", "dlig", "salt";
   text-rendering: optimizeLegibility;
-
+  text-align: justify;
   background-color: $background-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $text-color;
-
-  a, a:hover {
+  a {
     color: $alt-color;
+    white-space: nowrap;
+    padding-bottom: 0px;
+    position: relative;
+    text-decoration: none;
   }
-
+  a:hover {
+    color: $alt-color;
+    text-decoration: none;
+  }
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  a:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #c72323;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.4s;
+    -moz-transition: opacity 0.5s, -moz-transform 0.4s;
+    transition: opacity 0.5s, transform 0.4s;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    transform: scaleX(0);
+  }
   p {
     line-height: $base-line-height;
   }
-
-  article > :first-child {
+  article> :first-child {
     &:first-letter {
       color: $alt-color-darker;
       display: inline-block;
@@ -32,20 +60,16 @@ body {
       font-weight: bold;
       margin: 0.12em 0.15em 0 -0.01em;
     }
-
-    min-height: 2em + $base-line-height;
+    min-height: 2em+$base-line-height;
   }
-
   h1 {
     font-weight: 600;
   }
-
   h2 {
     margin-top: 1em;
     font-size: 1.6em;
     margin-bottom: 0.6em;
   }
-
   h3 {
     font-size: 1.2em;
     font-variant: small-caps;
@@ -61,29 +85,28 @@ article {
     margin-bottom: 0;
     list-style: none;
   }
-
   ul {
     position: relative;
     padding: 0;
     margin-left: 0;
   }
-
-  ul > li:before {
-    position: absolute;
+  li>ul>li {
+    padding-left: 40px;
+  }
+  ul>li:before {
     content: "▪";
     color: $alt-color;
     left: -1.15em;
+    padding-right: 5px;
   }
-
-  pre, code {
+  pre,
+  code {
     background-color: $background-color;
   }
-
   pre {
     padding: 1em;
     border-radius: 5px;
   }
-
   code {
     font-family: $mono-font-family;
   }
@@ -96,16 +119,13 @@ blockquote {
   padding-left: 0.9em;
   margin-left: -1em;
   font-style: oblique;
-
   > :last-child {
     margin-bottom: 0;
   }
-
   code {
     font-style: normal;
     font-weight: 400;
   }
-
   em {
     font-style: normal;
   }
@@ -120,23 +140,23 @@ blockquote {
   border-top: 3px solid $alt-color;
 }
 
-.small-ornament, .big-ornament {
-  > svg {
+.small-ornament,
+.big-ornament {
+  >svg {
     display: inline-block;
     vertical-align: middle;
     width: 40px;
     height: 40px;
-
     path {
-        fill: $alt-color-darker;
-        fill-rule: evenodd;
-        shape-rendering: geometricPrecision;
+      fill: $alt-color-darker;
+      fill-rule: evenodd;
+      shape-rendering: geometricPrecision;
     }
   }
 }
 
 .big-ornament {
-  > svg {
+  >svg {
     width: 14em;
     height: 4em;
     margin-top: 2em;
@@ -146,7 +166,6 @@ blockquote {
 
 header {
   margin-bottom: 1em;
-
   p {
     margin-top: 1em;
   }
@@ -156,16 +175,13 @@ footer {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: $small-font-size;
-
   color: $alt-text-color;
-
   .biography {
     margin-top: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid $subdued-border;
     margin-bottom: 1em;
   }
-
   h2 {
     font-size: 1.2em;
     font-variant: small-caps;
@@ -173,8 +189,8 @@ footer {
     font-weight: bold;
     letter-spacing: 0.15em;
   }
-
-  a, a:hover {
+  a,
+  a:hover {
     color: $alt-color-darker;
   }
 }
@@ -183,17 +199,16 @@ footer {
   border-top: 1px solid $subdued-border;
   padding-top: 1em;
   margin-top: 2em;
-
-  ul, ol {
+  ul,
+  ol {
     margin-left: -2em;
   }
-
-  > ol {
+  >ol {
     margin-left: -1.5em;
   }
 }
 
-sup > .footnote {
+sup>.footnote {
   margin-left: -0.2em;
   font-style: normal;
 }
@@ -208,15 +223,14 @@ table {
   border-collapse: separate;
   background-color: $background-color;
   border-left: 2.5pt solid $alt-color;
-
-  td, th {
+  td,
+  th {
     display: table-cell;
     vertical-align: inherit;
     border: 0;
     padding-top: 0;
     padding-bottom: 0;
   }
-
   th {
     padding-bottom: 0.6em;
     // border-bottom: 2px solid $alt-color;

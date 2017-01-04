@@ -1,21 +1,25 @@
 # Site settings
-title: "On Software Engineering, Mathematics<br>and Philosophy"
-author: "Hugo Sereno Ferreira"
-description: "This is a blog about software, some mathematics, and the occasional philosophy. Not necessarily in that order."
-keywords: "Software Engineering, Mathematics, Philosophy, Scala, Epistemology, Existentialism, Programming, Machine-Learning, Artificial Intelligence, Statistics, Probability, Puzzles"
-biography: "I am a Professor of Software Engineering at the <a href='http://www.fe.up.pt'>Faculty of Engineering</a>, University of Porto and Senior Researcher at <a href='https://www.inesctec.pt'>INESC TEC</a>. Here you can find my <a href='/assets/thesis.pdf'>PhD Thesis</a> and my <a href='/assets/cv.pdf'>Résumé</a>."
-colophon: "© MMXIII — MMXVI by Hugo Sereno Ferreira.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/'>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a>."
+title: "Life, the Universe and Everything"
+author: "Venkatesh Duppada"
+description: "I am trying to blog some of the things I do. So this is that place. Go around and find more!"
+keywords: ""
+biography: "Hello World! I'm Venkatesh Duppada. I graduate from <a href='http://www.iitb.ac.in'>IIT Bombay</a> with honors in Computer Science and Engineering in 2016. I'm currently busy, working as Data Engineer at <a href='http://lumiata.com'>Lumiata, Inc.</a>, to make world a better place."
+colophon: "© MMXVII by Venkatesh Duppada.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>Creative Commons</a>.<br>
+This site is hosted at <a href='https://pages.github.com'>Github Pages</a> and created with <a href='http://jekyllrb.com'>Jekyll</a> using <a href='https://github.com/hugoferreira/papyrus-theme'>papyrus theme</a>."
 
 baseurl: ""
-url: "http://hugosereno.eu"
+url: ""
 
-twitter_username: ferreira_hugo
-github_username: hugoferreira
-linkedin_username: hugoserenoferreira
-facebook_username: hugo.sereno.ferreira
-google-analytics: UA-69060-5
+twitter_username: venky9venkatesh
+github_username: venkatesh-1729
+linkedin_username: venkatesh-duppada
 
 simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
+
+markdeep_diagram_js:
+  - markdeep_diagram.js
+markdeep_diagram_css:
+  - markdeep_diagram.css
