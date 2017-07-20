@@ -187,5 +187,3 @@ If you want to know more internal of log replication etc. refer links below.
 3. [Apache ZooKeeper](https://zookeeper.apache.org/)
 4. [Kafka data structures in Zookeeper](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+data+structures+in+Zookeeper)
 
-<blockquote class="embedly-card"><h4><a href="https://venkatesh-1729.github.io/blog/2017/01/01/Distributed-Stream-Processing-With-Apache-Kafka/">Distributed Stream Processing With Apache Kafka</a></h4><p>Distributed Stream Processing With Apache Kafka 1 Jan 2017 ...</p></blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>

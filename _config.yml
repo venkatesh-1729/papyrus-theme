@@ -23,3 +23,7 @@ markdeep_diagram_js:
   - markdeep_diagram.js
 markdeep_diagram_css:
   - markdeep_diagram.css
+facets_js:
+  - facets.js
+facets_css:
+  - facets.css
